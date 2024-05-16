@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bec-yX-Z1H">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomepageViewController" customModule="DisneyPlus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="z4T-6b-Z9Z" userLabel="Featured Collection View">
+                                <rect key="frame" x="0.0" y="92" width="414" height="350"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.1764705882" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="255-uL-eVd"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yxM-mH-T6X">
+                                    <size key="itemSize" width="280" height="350"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="featuredCell" id="3Dg-dz-Wl1" customClass="FeaturedCollectionViewCell" customModule="DisneyPlus" customModuleProvider="target">
+                                        <rect key="frame" x="67" y="0.0" width="280" height="300"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eDm-KO-ZNb">
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="interstellar" translatesAutoresizingMaskIntoConstraints="NO" id="2bS-NM-CVe">
+                                                    <rect key="frame" x="0.0" y="0.0" width="280" height="300"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="280" id="tqb-De-68p"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.16078431369999999" green="0.1764705882" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="2bS-NM-CVe" firstAttribute="centerX" secondItem="eDm-KO-ZNb" secondAttribute="centerX" id="cNY-PB-VYR"/>
+                                                <constraint firstAttribute="bottom" secondItem="2bS-NM-CVe" secondAttribute="bottom" id="fWJ-rR-RdB"/>
+                                                <constraint firstItem="2bS-NM-CVe" firstAttribute="top" secondItem="eDm-KO-ZNb" secondAttribute="top" id="wwv-TB-Fcc"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="ivFeatured" destination="2bS-NM-CVe" id="5Vd-b6-fQx"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rD6-jh-lV2">
+                                <rect key="frame" x="17" y="462" width="380" height="60"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j9J-Fu-x1a" userLabel="Disney">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="disneyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="dIM-6R-COg">
+                                                <rect key="frame" x="5" y="5" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="6Bv-pv-DCY"/>
+                                                    <constraint firstAttribute="height" constant="50" id="L3O-OI-9it"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.21960784310000001" green="0.2274509804" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="0Lx-ed-a0D"/>
+                                            <constraint firstItem="dIM-6R-COg" firstAttribute="leading" secondItem="j9J-Fu-x1a" secondAttribute="leading" constant="5" id="8f9-je-sil"/>
+                                            <constraint firstAttribute="height" constant="60" id="BH8-x0-J6e"/>
+                                            <constraint firstItem="dIM-6R-COg" firstAttribute="top" secondItem="j9J-Fu-x1a" secondAttribute="top" constant="5" id="Mru-Lz-Q5Y"/>
+                                            <constraint firstAttribute="trailing" secondItem="dIM-6R-COg" secondAttribute="trailing" constant="5" id="auU-xq-EMt"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIr-WY-GzH" userLabel="Pixar">
+                                        <rect key="frame" x="80" y="0.0" width="60" height="60"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pixar" translatesAutoresizingMaskIntoConstraints="NO" id="QhR-Mc-nGJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="JpZ-VB-uAh"/>
+                                                    <constraint firstAttribute="height" constant="60" id="V4X-0L-eQP"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.21960784310000001" green="0.2274509804" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="QhR-Mc-nGJ" firstAttribute="top" secondItem="nIr-WY-GzH" secondAttribute="top" id="I7G-c0-Zd9"/>
+                                            <constraint firstAttribute="width" constant="60" id="Lmv-xh-Qzc"/>
+                                            <constraint firstAttribute="height" constant="60" id="NRE-hI-jfG"/>
+                                            <constraint firstAttribute="trailing" secondItem="QhR-Mc-nGJ" secondAttribute="trailing" id="tzb-Nv-zcA"/>
+                                            <constraint firstItem="QhR-Mc-nGJ" firstAttribute="leading" secondItem="nIr-WY-GzH" secondAttribute="leading" id="uLD-Sh-Fqm"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Abo-Sw-Ijf" userLabel="Marvel">
+                                        <rect key="frame" x="160" y="0.0" width="60" height="60"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marvel" translatesAutoresizingMaskIntoConstraints="NO" id="FyB-2M-Cie">
+                                                <rect key="frame" x="5" y="5" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="aDy-Qq-4bt"/>
+                                                    <constraint firstAttribute="width" constant="50" id="sM5-WW-ZTR"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.21960784310000001" green="0.2274509804" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="FyB-2M-Cie" secondAttribute="trailing" constant="5" id="Xgj-8f-ogW"/>
+                                            <constraint firstItem="FyB-2M-Cie" firstAttribute="top" secondItem="Abo-Sw-Ijf" secondAttribute="top" constant="5" id="dOi-Zg-9cH"/>
+                                            <constraint firstAttribute="width" constant="60" id="h9l-2T-y7h"/>
+                                            <constraint firstItem="FyB-2M-Cie" firstAttribute="leading" secondItem="Abo-Sw-Ijf" secondAttribute="leading" constant="5" id="rri-Ab-JlO"/>
+                                            <constraint firstAttribute="height" constant="60" id="w5T-n1-gSn"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dc6-4Z-YRE" userLabel="StarWars">
+                                        <rect key="frame" x="240" y="0.0" width="60" height="60"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starwars" translatesAutoresizingMaskIntoConstraints="NO" id="Tcv-je-NuN">
+                                                <rect key="frame" x="5" y="5" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="LJr-rj-pgV"/>
+                                                    <constraint firstAttribute="width" constant="50" id="hyu-dA-zNl"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.21960784310000001" green="0.2274509804" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="PT5-6T-E9K"/>
+                                            <constraint firstAttribute="height" constant="60" id="d8m-k7-0T9"/>
+                                            <constraint firstAttribute="trailing" secondItem="Tcv-je-NuN" secondAttribute="trailing" constant="5" id="fS9-7Y-ixw"/>
+                                            <constraint firstItem="Tcv-je-NuN" firstAttribute="top" secondItem="Dc6-4Z-YRE" secondAttribute="top" constant="5" id="n6u-rq-w1Q"/>
+                                            <constraint firstItem="Tcv-je-NuN" firstAttribute="leading" secondItem="Dc6-4Z-YRE" secondAttribute="leading" constant="5" id="wru-uR-TZp"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wwk-LP-LXz" userLabel="National">
+                                        <rect key="frame" x="320" y="0.0" width="60" height="60"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="national" translatesAutoresizingMaskIntoConstraints="NO" id="bny-rd-Wrg">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="0xO-Vo-GH8"/>
+                                                    <constraint firstAttribute="height" constant="60" id="rVx-rZ-ls0"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.21960784310000001" green="0.2274509804" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="0BD-JJ-1Us"/>
+                                            <constraint firstAttribute="trailing" secondItem="bny-rd-Wrg" secondAttribute="trailing" id="19T-lj-wEc"/>
+                                            <constraint firstAttribute="width" constant="60" id="6Gu-tO-o9m"/>
+                                            <constraint firstItem="bny-rd-Wrg" firstAttribute="top" secondItem="Wwk-LP-LXz" secondAttribute="top" id="A1C-3n-zuL"/>
+                                            <constraint firstItem="bny-rd-Wrg" firstAttribute="leading" secondItem="Wwk-LP-LXz" secondAttribute="leading" id="LXi-aT-MKG"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sjV-IC-cqY" userLabel="NewToDisney Collection View">
+                                <rect key="frame" x="0.0" y="552" width="414" height="128"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.1764705882" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.21960784310000001" green="0.2274509804" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="ZWy-Oq-kH5"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KB0-Ud-ELJ">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newToDisneyCell" id="UR8-7f-hxa" customClass="NewToDisneyCollectionViewCell" customModule="DisneyPlus" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wob-Ad-Xi5">
+                                            <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thehatefuleight" translatesAutoresizingMaskIntoConstraints="NO" id="KOv-3J-eLJ">
+                                                    <rect key="frame" x="5" y="5" width="120" height="120"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="TVc-ij-hau"/>
+                                                        <constraint firstAttribute="height" constant="120" id="oS0-nJ-vK2"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.16078431369999999" green="0.1764705882" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="KOv-3J-eLJ" firstAttribute="leading" secondItem="wob-Ad-Xi5" secondAttribute="leading" constant="5" id="MPF-A3-s8p"/>
+                                                <constraint firstAttribute="trailing" secondItem="KOv-3J-eLJ" secondAttribute="trailing" constant="5" id="fGO-eW-63w"/>
+                                                <constraint firstItem="KOv-3J-eLJ" firstAttribute="top" secondItem="wob-Ad-Xi5" secondAttribute="top" constant="5" id="nXh-n0-47z"/>
+                                                <constraint firstAttribute="bottom" secondItem="KOv-3J-eLJ" secondAttribute="bottom" constant="5" id="sDB-3c-zPx"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="ivNewTo" destination="KOv-3J-eLJ" id="UXR-MD-Q8c"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New to Disney+" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T19-oy-QuM">
+                                <rect key="frame" x="10" y="527" width="394" height="16"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eg8-c8-YSp">
+                                <rect key="frame" x="0.0" y="706" width="414" height="128"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.1764705882" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Mvp-Ej-FXs"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fy5-iB-MyQ">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="whatToWatchCell" id="rFK-5t-C7H" customClass="WhatToWatchTonightCollectionViewCell" customModule="DisneyPlus" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mF1-XC-w58">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inception" translatesAutoresizingMaskIntoConstraints="NO" id="PLl-5H-ETy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="128"/>
+                                                    <color key="backgroundColor" red="0.16078431369999999" green="0.1764705882" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="128" id="Hl6-2s-SHv"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PLl-5H-ETy" firstAttribute="top" secondItem="mF1-XC-w58" secondAttribute="top" id="Dap-iZ-RIh"/>
+                                                <constraint firstAttribute="trailing" secondItem="PLl-5H-ETy" secondAttribute="trailing" id="PtH-Rh-N6b"/>
+                                                <constraint firstAttribute="bottom" secondItem="PLl-5H-ETy" secondAttribute="bottom" id="jaY-dG-bt7"/>
+                                                <constraint firstItem="PLl-5H-ETy" firstAttribute="leading" secondItem="mF1-XC-w58" secondAttribute="leading" id="p3j-BV-m9H"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="ivWhatToWatch" destination="PLl-5H-ETy" id="ZxG-1d-AK8"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What To Watch Tonight? " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eml-mc-04C">
+                                <rect key="frame" x="10" y="685" width="151" height="16"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="CDl-OG-b6g">
+                                <rect key="frame" x="52.5" y="827.5" width="309.5" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZP-b5-qLE">
+                                        <rect key="frame" x="0.0" y="0.0" width="54.5" height="34"/>
+                                        <color key="tintColor" systemColor="scrollViewTexturedBackgroundColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="house.fill" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="800-W5-F4C">
+                                        <rect key="frame" x="89.5" y="0.0" width="50" height="34"/>
+                                        <color key="tintColor" systemColor="scrollViewTexturedBackgroundColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxa-PF-jcK">
+                                        <rect key="frame" x="174.5" y="0.0" width="50" height="34"/>
+                                        <color key="tintColor" systemColor="scrollViewTexturedBackgroundColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrow.down.circle.fill" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJZ-GA-6Tl">
+                                        <rect key="frame" x="259.5" y="0.0" width="50" height="34"/>
+                                        <color key="tintColor" systemColor="scrollViewTexturedBackgroundColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="person.crop.circle.fill" catalog="system"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.16078431369999999" green="0.1764705882" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sjV-IC-cqY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1RJ-Dh-Ab4"/>
+                            <constraint firstItem="T19-oy-QuM" firstAttribute="top" secondItem="rD6-jh-lV2" secondAttribute="bottom" constant="5" id="1wL-Mc-cu5"/>
+                            <constraint firstItem="eg8-c8-YSp" firstAttribute="top" secondItem="eml-mc-04C" secondAttribute="bottom" constant="5" id="2L7-nF-95o"/>
+                            <constraint firstItem="rD6-jh-lV2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3YG-hF-FT4"/>
+                            <constraint firstItem="T19-oy-QuM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BIe-Vd-MOt"/>
+                            <constraint firstItem="CDl-OG-b6g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EcB-tz-Iu1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CDl-OG-b6g" secondAttribute="bottom" constant="0.5" id="IJ1-CQ-SBe"/>
+                            <constraint firstItem="rD6-jh-lV2" firstAttribute="top" secondItem="z4T-6b-Z9Z" secondAttribute="bottom" constant="20" id="JiM-4l-cza"/>
+                            <constraint firstItem="eml-mc-04C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Jy2-M2-YNk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sjV-IC-cqY" secondAttribute="trailing" id="PZN-dm-Xcz"/>
+                            <constraint firstItem="eg8-c8-YSp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QgQ-vI-QCX"/>
+                            <constraint firstItem="z4T-6b-Z9Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Tuy-v6-Ljq"/>
+                            <constraint firstItem="eml-mc-04C" firstAttribute="top" secondItem="sjV-IC-cqY" secondAttribute="bottom" constant="5" id="UvG-iN-dVj"/>
+                            <constraint firstItem="z4T-6b-Z9Z" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Wh5-cs-niY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eg8-c8-YSp" secondAttribute="trailing" id="dY8-zc-c2r"/>
+                            <constraint firstItem="z4T-6b-Z9Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fm6-oP-QQc"/>
+                            <constraint firstItem="T19-oy-QuM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="tZz-w4-3Rk"/>
+                            <constraint firstItem="sjV-IC-cqY" firstAttribute="top" secondItem="rD6-jh-lV2" secondAttribute="bottom" constant="30" id="uCU-iC-aIp"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="EaR-36-4sv"/>
+                    <navigationItem key="navigationItem" id="NYU-9B-uv3"/>
+                    <connections>
+                        <outlet property="featuredCollectionView" destination="z4T-6b-Z9Z" id="4zx-WK-YHU"/>
+                        <outlet property="newToDisneyCollectionView" destination="sjV-IC-cqY" id="BfM-n4-aKA"/>
+                        <outlet property="whatToWatchTonightCollectionView" destination="eg8-c8-YSp" id="zws-Na-DNO"/>
+                        <segue destination="2Ob-8J-R96" kind="show" identifier="toDetails" id="1Mr-lK-AcR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1973.913043478261" y="-34.151785714285715"/>
+        </scene>
+        <!--Detail Page-->
+        <scene sceneID="FQa-ue-vfg">
+            <objects>
+                <viewController id="2Ob-8J-R96" customClass="DetailsViewController" customModule="DisneyPlus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0PK-s4-wQJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="0Bf-0h-tx1">
+                                <rect key="frame" x="107" y="214" width="200" height="468"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="interstellar" translatesAutoresizingMaskIntoConstraints="NO" id="oOU-2h-zSG">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="5gV-nW-Wze"/>
+                                            <constraint firstAttribute="width" constant="200" id="JOh-u1-yhe"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INTERSTELLAR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIB-2d-nU6">
+                                        <rect key="frame" x="0.0" y="350" width="200" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <color key="textColor" systemColor="systemGray6Color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2S-xp-RnJ">
+                                        <rect key="frame" x="0.0" y="433.5" width="200" height="34.5"/>
+                                        <color key="tintColor" red="0.21960784310000001" green="0.2274509804" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="play.circle.fill" catalog="system" title="PLAY"/>
+                                        <connections>
+                                            <action selector="btnPlay:" destination="2Ob-8J-R96" eventType="touchUpInside" id="que-LG-gSd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rCp-Xg-fch"/>
+                        <color key="backgroundColor" red="0.16078431372549018" green="0.1764705882352941" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" systemColor="systemBlueColor"/>
+                        <constraints>
+                            <constraint firstItem="0Bf-0h-tx1" firstAttribute="centerY" secondItem="0PK-s4-wQJ" secondAttribute="centerY" id="BpK-AH-nuX"/>
+                            <constraint firstItem="0Bf-0h-tx1" firstAttribute="centerX" secondItem="0PK-s4-wQJ" secondAttribute="centerX" id="RWh-vZ-pEb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail Page" style="editor" id="gXg-0Y-Xhz"/>
+                    <connections>
+                        <outlet property="ivFilm" destination="oOU-2h-zSG" id="bIr-vX-Brb"/>
+                        <outlet property="lblFilmName" destination="VIB-2d-nU6" id="AX0-eK-Lv6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JHF-Lc-shS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2902.898550724638" y="-34.151785714285715"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TYr-3B-ywx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bec-yX-Z1H" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5R1-7L-a9u">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="LetterColor1"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="EGa-pP-IOv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qby-vI-BVT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968" y="-34"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.down.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="disneyLogo" width="50" height="55"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="inception" width="200" height="300"/>
+        <image name="interstellar" width="200" height="300"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="marvel" width="256" height="256"/>
+        <image name="national" width="699" height="357"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="pixar" width="906" height="275"/>
+        <image name="play.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="starwars" width="50" height="55"/>
+        <image name="thehatefuleight" width="200" height="300"/>
+        <namedColor name="LetterColor1">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="scrollViewTexturedBackgroundColor">
+            <color red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
